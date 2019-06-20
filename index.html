@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Kiosk</title>
+
+  <!-- Materialize CDN (Material Design CSS Framework): used for buttons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Font CDNs -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:900&display=swap" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  
+  <!-- Keyboard CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css">
+
+  <!-- CSS -->
+  <link href="css/form.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="grid-item1"></div>
+        <div class="grid-item2">
+            <div id="main">
+                <!-- Pre-form -->
+                <div id="pre" class="">
+                    <label>Welcome to <span class="noted">Arthur Ray Law Offices.</span> Please sign in below and someone will be with you shortly.</label>
+                    <div class="button-container">
+                        <button class="waves-effect waves-light b1 btn q1btn" type="button">Sign in Here</button>
+                    </div>
+                </div>
+                <!-- Question 1 -->
+                <div id="q1" class="">
+                    <label for="name-label">Your full name:</label>
+                    <input id="field" type="text" class="form-control input" name="name" placeholder="Click and type here">
+                    <small id="nameHelp" class="form-text text-muted">This is to notify everyone of your arrival.</small>
+                </div>
+                <!-- Question 2 -->
+                <div id="q2" class="">
+                    <label>Have you filed a case with...?</label>
+                    <div class="button-container">
+                        <button id="skip-client" class="waves-effect waves-light b3 btn-large q4abtn">Skip Carnell</button>
+                        <button id="ray-client" class="waves-effect waves-light b3 btn-large q4bbtn">Arthur Ray</button>
+                        <button id="not-client" class="waves-effect waves-light b3 btn-large q3btn">Neither</button>
+                    </div>
+                </div>
+                <!-- Question 3 -->
+                <div id="q3" class="">
+                    <label>Are you here to talk about..?</label>
+                    <div class="button-container">
+                        <button id="bankruptcy" class="waves-effect waves-light b2 btn-large q4abtn">Bankruptcy</button>
+                        <button id="other" class="waves-effect waves-light b2 btn-large q4abtn">Other</button>
+                    </div>
+                </div>
+                <!-- Question 4A -->
+                <div id="q4a" class="">
+                    <label>Do you have an appointment?</label>
+                    <div class="button-container">
+                        <button id="appt-yes" class="waves-effect waves-light b2 btn-large finbtn">Yes</button>
+                        <button id="appt-no" class="waves-effect waves-light b2 btn-large finbtn">No</button>
+                    </div>
+                </div>
+                <!-- Question 4B -->
+                <div id="q4b" class="">
+                    <label>Did you speak to someone about coming in?</label>
+                    <div class="button-container">
+                        <button id="speak-yes" class="waves-effect waves-light b2 btn-large finbtn">Yes</button>
+                        <button id="speak-no" class="waves-effect waves-light b2 btn-large finbtn">No</button>
+                    </div>
+                </div>
+                <!-- Post-form -->
+                <div id="post" class="">
+                    <label>Thanks for submitting this form! Have a seat and we will see you shortly.</label>
+                </div>
+                <!-- Back Button -->
+                <div class="button-container"><button id="back" class="waves-effect waves-light btn bb"><i class="fas fa-reply"></i></button></div>
+            </div>
+        </div>
+        <div class="grid-item3"></div>
+    </div>
+    <!-- Keyboard -->
+    <div class="simple-keyboard" id="keyb"></div>
+
+    <!-- JQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Materialize CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Keyboard CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.min.js"></script>
+    <!-- Form Script -->
+    <script src="js/form.js"></script>
+    <!-- Keyboard Script -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>
