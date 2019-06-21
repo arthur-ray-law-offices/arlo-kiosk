@@ -20,9 +20,24 @@ $( document ).ready(function() {
     $("#q4b").hide();
     $("#keyb").hide();
     $("#back").hide();
-    $("#post").hide();
+    $("#post").hide();    
+
+    var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+    //Zero the idle timer on mouse movement.
+    $(this).mousemove(function (e) {
+        idleTime = 0;
+    });
+    $(this).keypress(function (e) {
+        idleTime = 0;
+    });
 });
 
+function timerIncrement() {
+    idleTime = idleTime + 1;
+    if (idleTime > 5) {
+        window.location.reload();
+    }
+}
 
 // Q1 -> Q2
 $(".q1btn").click(function(event){
@@ -120,11 +135,11 @@ function msgChat(info, data){
     var sent = "";
     if (form_data.designation == "ray"){
         if (form_data.spoken_to){
-            sent = "Ray Client: " + form_data.name + " is here and is expected";
+            sent = "Bankruptcy Client: " + form_data.name + " is here and is expected";
 
         }
         else {
-            sent = "Ray Client: " + form_data.name + " is here and is not expected";
+            sent = "Bankruptcy Client: " + form_data.name + " is here and is not expected";
         }
     }
     else if (form_data.designation == "skip"){
@@ -206,7 +221,7 @@ function loginChat(data, res){
 }   
 function authChat(data){
     var info = {
-        "user": "will_e",
+        "user": "signin.bot",
         "password": ""
     };
     request = $.ajax({
