@@ -11,7 +11,6 @@ document.querySelector(".input").addEventListener("input", event => {
   keyboard.setInput(event.target.value);
 });
 
-console.log(keyboard);
 
 function onChange(input) {
   document.querySelector(".input").value = input;
@@ -27,7 +26,9 @@ function onKeyPress(button) {
         form_data.name = $("#field").val();
         var r = confirm("Is your name spelled correctly: " + form_data.name + "?")
         if (r){
-            hist.push("#q2");        
+            document.getElementById("back").classList.remove("bb2");
+            document.getElementById("back").classList.add("bb");      
+            hist.push("#q2");       
             $("#keyb").hide();
             $(hist[hist.length-2]).hide()
             $(hist[hist.length-1]).show()
